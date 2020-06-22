@@ -35,6 +35,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -148,8 +149,44 @@ select {
   font-display: swap;
 }
 
+/** MAIN **/
+:root {
+  --mint-color: #baf0da;
+  --blue-color: #2649f9;
+}
+
 body {
-  background: #10b576;
+  background: var(--mint-color);
+  font-family: 'Lato', sans-serif;
+  color: var(--blue-color);
+  font-size:62.5%;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 2.4;
+}
+
+header {
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.countdown-container {
+  text-align: center;
+  background: #aef7a4;
+}
+
+.countdown-container h2 {
+  font-size: 1.2rem;
+}
+
+.countdown-container > div {
+  font-size: 2rem;
 }
 
 .flyer-container {
@@ -160,7 +197,95 @@ body {
 }
 
 .responsive-flyer {
-  max-width: 100vw;
+  max-width: 50vw;
   max-height: 80vh;
   margin: 16px;
+}
+
+.countdown-container {
+  padding: 2rem 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#ds-countdown {
+  flex: 100vw 0 0;
+}
+
+.text-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.8rem;
+}
+
+.text-column {
+  flex: calc(50% - 1.3rem) 0 0;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+.text-column img,
+.text-column p {
+  margin-bottom: 0.8rem;
+}
+
+.text-column h3,
+.text-column h4 {
+  margin-bottom: 0.8rem;
+  margin-top: 1.6rem;
+}
+
+.text-column ul {
+  text-align: left;
+}
+
+.stream-container {
+  background: #e3ef5f;
+}
+
+.video-container {
+  position:relative;
+  padding-bottom:56.25%;
+  padding-top:30px;
+  height:0;
+  overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+
+@media only screen and (max-width: 769px) {
+  h1 {
+    line-height: 1.2;
+    font-size: 2rem;
+  }
+
+  .countdown-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .countdown-container h2 {
+    font-size: 0.6rem;
+  }
+
+  .countdown-container > div {
+    font-size: 1rem;
+  }
+
+  .text-container {
+    flex-direction: column;
+  }
+
+  .text-column {
+    text-align: left;
+  }
+
 }
