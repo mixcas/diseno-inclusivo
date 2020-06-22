@@ -1,12 +1,85 @@
-h1 {
-  color: hotpink;
-  font-family: 'Lato';
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 @font-face {
   font-family: 'Lato';
   src: url('assets/fonts/lato/Lato-Black.woff2') format('woff2'),
-      url('assets/fonts/lato/Lato-Black.woff') format('woff');
+  url('assets/fonts/lato/Lato-Black.woff') format('woff');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -15,7 +88,7 @@ h1 {
 @font-face {
   font-family: 'Lato';
   src: url('assets/fonts/lato/Lato-BoldItalic.woff2') format('woff2'),
-      url('assets/fonts/lato/Lato-BoldItalic.woff') format('woff');
+  url('assets/fonts/lato/Lato-BoldItalic.woff') format('woff');
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -24,7 +97,7 @@ h1 {
 @font-face {
   font-family: 'Lato';
   src: url('assets/fonts/lato/Lato-Bold.woff2') format('woff2'),
-      url('assets/fonts/lato/Lato-Bold.woff') format('woff');
+  url('assets/fonts/lato/Lato-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -33,7 +106,7 @@ h1 {
 @font-face {
   font-family: 'Lato';
   src: url('assets/fonts/lato/Lato-Italic.woff2') format('woff2'),
-      url('assets/fonts/lato/Lato-Italic.woff') format('woff');
+  url('assets/fonts/lato/Lato-Italic.woff') format('woff');
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -42,7 +115,7 @@ h1 {
 @font-face {
   font-family: 'Lato';
   src: url('assets/fonts/lato/Lato-Regular.woff2') format('woff2'),
-      url('assets/fonts/lato/Lato-Regular.woff') format('woff');
+  url('assets/fonts/lato/Lato-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -51,7 +124,7 @@ h1 {
 @font-face {
   font-family: 'Lato';
   src: url('assets/fonts/lato/Lato-BlackItalic.woff2') format('woff2'),
-      url('assets/fonts/lato/Lato-BlackItalic.woff') format('woff');
+  url('assets/fonts/lato/Lato-BlackItalic.woff') format('woff');
   font-weight: 900;
   font-style: italic;
   font-display: swap;
@@ -60,7 +133,7 @@ h1 {
 @font-face {
   font-family: 'Lato';
   src: url('assets/fonts/lato/Lato-Light.woff2') format('woff2'),
-      url('assets/fonts/lato/Lato-Light.woff') format('woff');
+  url('assets/fonts/lato/Lato-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -69,9 +142,25 @@ h1 {
 @font-face {
   font-family: 'Lato';
   src: url('assets/fonts/lato/Lato-LightItalic.woff2') format('woff2'),
-      url('assets/fonts/lato/Lato-LightItalic.woff') format('woff');
+  url('assets/fonts/lato/Lato-LightItalic.woff') format('woff');
   font-weight: 300;
   font-style: italic;
   font-display: swap;
 }
 
+body {
+  background: #10b576;
+}
+
+.flyer-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.responsive-flyer {
+  max-width: 100vw;
+  max-height: 80vh;
+  margin: 16px;
+}
